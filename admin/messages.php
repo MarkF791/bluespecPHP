@@ -2,7 +2,7 @@
 include('../functions.php');
 echo file_get_contents("../html/adminNav.html");
 
-            $result = mysqli_query($db,"SELECT id, name, email, subject, message FROM contacts WHERE markRead=0 ORDER BY id desc");
+            $result = mysqli_query($db,"SELECT id, name, email, subject, message, optin FROM contacts WHERE markRead=0 ORDER BY id desc");
             ?>
 <?php
 if (mysqli_num_rows($result) > 0) {
@@ -17,6 +17,7 @@ if (mysqli_num_rows($result) > 0) {
         <th scope="col">Email</th>
         <th scope="col">Subject</th>
         <th scope="col">Message</th>
+        <th scope="col">Promotional opt-in</th>
         <th scope="col" style="text-align:right">Mark as read</th>
       </tr>
     </thead>
@@ -31,6 +32,7 @@ if (mysqli_num_rows($result) > 0) {
         <td><?php echo $row["email"]; ?></td>
         <td><?php echo $row["subject"]; ?></td>
         <td><?php echo $row["message"]; ?></td>
+        <td><?php echo $row["optin"]; ?></td>
         
         <input type="hidden" name="messageID" value="<?php echo $row['id']; ?>">
         <td><input type="submit" value="Read" name="read_btn" class="btn btn-primary" style="float: right;"></input></td>

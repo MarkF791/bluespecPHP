@@ -4,7 +4,7 @@ require_once 'dbconnect.php';
 // Attempt insert query execution
 try{
     // Create prepared statement
-    $sql = "INSERT INTO contacts (name, email, subject, message) VALUES (:name, :email, :subject, :message)";
+    $sql = "INSERT INTO contacts (name, email, subject, message, optin) VALUES (:name, :email, :subject, :message, :optin)";
     $stmt = $conn->prepare($sql);
     
     // Bind parameters to statement
@@ -12,6 +12,7 @@ try{
     $stmt->bindParam(':email', $_REQUEST['email']);
     $stmt->bindParam(':subject', $_REQUEST['subject']);
     $stmt->bindParam(':message', $_REQUEST['message']);
+    $stmt->bindParam(':optin', $_REQUEST['optin']);
     
     // Execute the prepared statement
     $stmt->execute();
