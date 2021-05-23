@@ -1,3 +1,4 @@
+<?php echo file_get_contents("html/clientheader.html"); ?>
 <?php include('functions.php') ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,7 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="padding-top:60px">
 <form method="post" action="login.php">
         <?php echo display_error(); ?>
         <div class="mb-3">
@@ -23,7 +24,7 @@
         </div>
         <button type="submit" name="login_btn" class="btn btn-primary">Login</button>
         <p>
-           Not Registered? <a href="login.php">Sign up</a>
+           Not Registered? <a href="register.php">Sign up</a>
         </p>
     </form>
     </div>

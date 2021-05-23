@@ -1,7 +1,5 @@
 <?php include('functions.php') ?>
-<!DOCTYPE html>
-<html lang="en">
-
+<?php echo file_get_contents("html/clientheader.html"); ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +11,7 @@
 
 <body>
 
-    <div class="container">
+    <div class="container" style="padding-top: 65px;">
     <h2>Register</h2>
     <form method="post" action="register.php">
         <?php echo display_error(); ?>
