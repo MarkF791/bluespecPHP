@@ -4,7 +4,7 @@ echo file_get_contents("../html/adminNav.html");
 ?>
 
 <div class="container d-grid gap-2" style="padding-top:70px">
-
+<label for="formFile" class="form-label">Please select User</label>
 <?php
 $sql=mysqli_query($db,"SELECT id, name FROM users");
 if(mysqli_num_rows($sql)){
@@ -21,7 +21,7 @@ echo $select;
         <input class="form-control" type="file" id="formFile">
     </div>
     <div>
-    <button type="submit" role="button" name="upload_invoice" value="Upload" class="btn btn-primary">Upload</button>
+    <button type="submit" role="button" name="upload_media" value="Upload" class="btn btn-primary">Upload</button>
     </div>
 </div>
 <input type="hidden" name="userID" value="<?php echo $row['id']; ?>">
