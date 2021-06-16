@@ -8,7 +8,7 @@
 </div>
 <div class="container text-center">
     <div class="container" style="padding:2.5%; background-color:white; max-width:1024px;">
-    <img src="https://bluespec.co.uk/wp-content/uploads/2020/11/BS-LogoAndText-2020_Final-No-DropShadow_3840_CroppedMore-1536x363.jpg" class="img-fluid" alt="Responsive image">
+    <img src="https://bluespec.co.uk/wp-content/uploads/2020/11/BS-LogoAndText-2020_Final-No-DropShadow_3840_CroppedMore-1536x363.jpg" class="img-fluid" alt="Bluespec logo">
     </div>
     <hr>
     <h1>MOTION IS EYE CATCHING</h1>
